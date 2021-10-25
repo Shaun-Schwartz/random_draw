@@ -95,13 +95,14 @@ module Colors
 
   def self.random_color
     weight = self.weighted_random_num
-    all = YELLOWS + GREENS + BLUES + PURPLES
+    all = YELLOWS + GREENS + BLUES + PURPLES + REDS
     matched_colors = all.select { |c| c[:weight] == weight }
-    matched_colors.sample
+    color_hash = matched_colors.sample
+    color_hash[color_hash.keys.first]
   end
 
   def self.weighted_random_num
-    # 1 = 4%, 2 = 12%, 3 = 20%, 4 = 28%, 5 = 36%
+  # 1 = 4, 2 = 12%, 3 = 20%, 4 = 28%, 5 = 36%
     a = rand(1..5)
     b = rand(1..5)
     [a, b].max
