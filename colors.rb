@@ -33,7 +33,7 @@ class Colors
     {green_three: '#00CD00', rarity: SUPER_RARE_RARITY},
     {observatory: '#049372', rarity: RARE_RARITY},
     {turquoise: '#36D7B7', rarity: RARE_RARITY},
-    {mountain_medow: '#16A085', rarity: COMMON_RARITY},
+    {mountain_meadow: '#16A085', rarity: COMMON_RARITY},
     {free_speech_aquamarine: '#03A678', rarity: COMMON_RARITY},
     {eucalyptus: '#26A65B', rarity: COMMON_RARITY},
     {patina: '#407A52', rarity: VERY_COMMON_RARITY},
@@ -111,7 +111,7 @@ class Colors
   end
 
   def rarityed_random_num
-    # 1 = 4, 2 = 12%, 3 = 20%, 4 = 28%, 5 = 36%
+    # 1 = 4%, 2 = 12%, 3 = 20%, 4 = 28%, 5 = 36%
     a = rand(1..5)
     b = rand(1..5)
     [a, b].max
