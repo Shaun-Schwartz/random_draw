@@ -1,8 +1,9 @@
 require_relative 'constants'
 require_relative 'rarity'
+require_relative 'rarity_helper'
 
 class Colors
-  include Rarity
+  include Rarity, RarityHelper
   attr_accessor :colors_used
 
   def initialize
@@ -102,18 +103,11 @@ class Colors
   ]
 
   def random_color
-    rarity = rarityed_random_num
+    rarity = weighted_random_num
     all = YELLOWS + GREENS + BLUES + PURPLES + REDS
     matched_colors = all.select { |c| c[:rarity] == rarity }
     color_hash = matched_colors.sample
     @colors_used << color_hash
     color_hash[color_hash.keys.first]
-  end
-
-  def rarityed_random_num
-    # 1 = 4%, 2 = 12%, 3 = 20%, 4 = 28%, 5 = 36%
-    a = rand(1..5)
-    b = rand(1..5)
-    [a, b].max
   end
 end
