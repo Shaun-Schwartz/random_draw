@@ -1,4 +1,3 @@
-gem 'ruby_svg_image_generator'
+source "https://rubygems.org"
 gem 'byebug', '11.1.3'
-gem 'victor'
-gem 'chunky_png'
+gem 'chunky_png', '~> 1.4.0'
