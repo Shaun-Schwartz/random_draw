@@ -5,7 +5,7 @@ require_relative 'chunky_png_extensions'
 require_relative 'colors'
 require_relative 'constants'
 
-class DrawRandom < Colors
+class DrawRandom
   include Constants
   attr_accessor :colors
 

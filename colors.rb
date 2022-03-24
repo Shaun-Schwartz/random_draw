@@ -1,9 +1,8 @@
 require_relative 'constants'
-require_relative 'rarity'
 require_relative 'rarity_helper'
 
 class Colors
-  include Rarity, RarityHelper
+  include Constants, RarityHelper
   attr_accessor :colors_used
 
   def initialize

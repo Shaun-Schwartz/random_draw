@@ -4,10 +4,9 @@ require 'chunky_png'
 require_relative 'colors'
 require_relative 'constants'
 require_relative 'file_name_helper'
-require_relative 'rarity'
 
-class RecursiveShapes < Colors
-  include Constants, Rarity, FileNameHelper
+class RecursiveShapes
+  include Constants, FileNameHelper
   attr_accessor :colors, :png
 
   POSSIBLE_SHAPES = ['square', 'circle']
