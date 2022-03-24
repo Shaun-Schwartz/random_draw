@@ -1,5 +1,10 @@
 # Random Draw
 
+### Installation
+1. Clone this repository
+2. Run `bundle install`
+3. That's all!
+
 ### Quick Start
 
 Random Draw is a command line application. To get started optionally make the files `recursive_shapes.rb` and `draw_random.rb` executable with `chmod +x recursive_shapes.rb draw_random.rb`. Alternatively the files can be run with ruby e.g. `ruby recursive_shapes.rb`.
