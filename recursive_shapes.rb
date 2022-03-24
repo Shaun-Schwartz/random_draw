@@ -7,7 +7,8 @@ require_relative 'file_name_helper'
 
 class RecursiveShapes
   include Constants, FileNameHelper
-  attr_accessor :colors, :png
+  attr_reader :colors
+  attr_accessor :png
 
   POSSIBLE_SHAPES = ['square', 'circle']
 
